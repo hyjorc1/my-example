@@ -18,35 +18,13 @@ public class Chicken extends Bird {
 		System.out.println("cackle");
 		int[] arr = {};
 
-		for (int i = 0; i < arr.length; i++) {
-			int temp = arr[i] + 1 + i + 10;
-			if (f1 > 0) {
-				continue;
-			}
-			for (int j = 0; j < arr.length; j++) {
-				int temp2 = arr[j];
-				temp += temp2;
-				break;
-			}
-		}
 		int count = 0;
+		int mark = 0;
 
-		while (count < 10) {
-			arr[count]++;
-		}
-
-		do {
-			int a = 0;
-		} while (count > 10);
-
-		int mark = 1;
-		int mark2 = 9;
 		if (mark == 0) {
 			count = 0;
-			mark = 1 + mark + 14;
 		} else if (mark < 0) {
 			mark++;
-			mark2--;
 		} 
 
 		method1(extracted(f1, f2), f2);
@@ -58,7 +36,11 @@ public class Chicken extends Bird {
 		return e1;
 	}
 
-	private synchronized void  method1(int arg1, String arg2) {
+	Bird bird;
+
+	public void method1(int arg1, String arg2) {
 		f1++;
+		f1 = bird.method2(f1, f2);
+		extracted(f1, f2);
 	}
 }
