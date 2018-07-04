@@ -20,7 +20,7 @@ public class Chicken extends Bird {
 	public int cackle() {
 		switch (f1) {
 		case 1: f1 = 2;
-		case 2: f1 = 3;
+		case 5: f1 = 5;
 		default: break;
 		}
 		return f1;
