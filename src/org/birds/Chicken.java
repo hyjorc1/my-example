@@ -1,8 +1,10 @@
 package org.birds;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.sun.jndi.cosnaming.IiopUrl.Address;
-import com.sun.org.apache.xpath.internal.operations.String;
 
 public class Chicken extends Bird {
 
@@ -28,15 +30,20 @@ public class Chicken extends Bird {
 		return flag;
 	}
 	
-	private Address[] createAddresses(int count) {
-		Address[] addresses = new Address[count];
+	private List<Address> createAddresses(int count) {
+		List<Address> addresses = new ArrayList<Address>(count);
 		for (int i = 0; i < count; i++) {
-			try {
-				addresses[i] = new Address("127.0.0.1", getFlag());
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			addresses.add(createAddress("127.0.0.1", getFlag()));
 		}
 		return addresses;
+	}
+
+	private Address createAddress(String host, boolean trigger) {
+		try {
+			return new Address(host, trigger);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 }
