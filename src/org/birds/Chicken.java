@@ -1,12 +1,14 @@
 package org.birds;
 
 
+import com.sun.jndi.cosnaming.IiopUrl.Address;
 import com.sun.org.apache.xpath.internal.operations.String;
 
 public class Chicken extends Bird {
 
 	int f1;
 	String f2;
+	boolean flag;
 
 	public Chicken(int f1, String f2) {
 		this.f1 = f1;
@@ -14,33 +16,27 @@ public class Chicken extends Bird {
 	}
 	
 	public int cackle() {
-
-		System.out.println("cackle");
-		int[] arr = {};
-
-		int count = 0;
-		int mark = 0;
-
-		if (mark == 0) {
-			count = 0;
-		} else if (mark < 0) {
-			mark++;
-		} 
-
-		method1(extracted(f1, f2), f2);
-
-		return count;
+		switch (f1) {
+		case 1: f1 = 2;
+		case 2: f1 = 3;
+		default: break;
+		}
+		return f1;
 	}
-
-	private int extracted(int e1, String s2) {
-		return e1;
+	
+	public boolean getFlag() {
+		return flag;
 	}
-
-	Bird bird;
-
-	public void method1(int arg1, String arg2) {
-		f1++;
-		f1 = bird.method2(f1, f2);
-		extracted(f1, f2);
+	
+	private Address[] createAddresses(int count) {
+		Address[] addresses = new Address[count];
+		for (int i = 0; i < count; i++) {
+			try {
+				addresses[i] = new Address("127.0.0.1", getFlag());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return addresses;
 	}
 }
