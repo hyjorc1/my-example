@@ -13,5 +13,9 @@ public class Dog {
 	public void takeABreath() {
 		System.out.println("...");
 	}
+	
+	public int method2(int f1, String f2) {
+		return f1;
+	}
 
 }
