@@ -20,4 +20,10 @@ public class Cat extends Feline implements Animal{
 		int s7 = 7;
 	}
 
+	@Override
+	public int getAge() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

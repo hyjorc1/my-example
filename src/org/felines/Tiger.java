@@ -12,8 +12,13 @@ public class Tiger extends Feline implements Animal{
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
+	@Override
+	public int getAge() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	
-	
+
 
 }

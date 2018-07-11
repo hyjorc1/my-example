@@ -5,6 +5,7 @@ public class Feline implements Animal {
 	private int age;
 	private int name;
 	
+	@Override
 	public int getAge() {
 		return age;
 	}
