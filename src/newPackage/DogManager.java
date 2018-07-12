@@ -1,4 +1,4 @@
-package org;
+package newPackage;
 import org.animals.Dog;
 
 
