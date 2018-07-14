@@ -18,7 +18,7 @@ public class Bird {
 	 
 	 public void invocationChains() {
 		Labrador labrador = new Labrador();
-		labrador.method4().substring(0, 10).substring(12).concat("test".substring(0, 10)).substring(17).toCharArray();
+		labrador.method4().substring(17).substring(0, 10).concat("test").substring(12).toCharArray();
 	 }
 
 }
