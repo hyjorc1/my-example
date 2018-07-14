@@ -7,4 +7,8 @@ public class Labrador extends Dog {
 		return f1;
 	}
 	
+	public String method4() {
+		return "sfdsfs";
+	}
+	
 }
