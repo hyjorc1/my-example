@@ -1,4 +1,4 @@
-package org.felines.p1.p2.p3;
+package org.felines.p4.p2.p3;
 
 public class Feline implements Animal {
 
