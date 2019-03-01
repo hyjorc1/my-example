@@ -15,7 +15,10 @@ class Lambda
     public static void main(String args[]) 
     { 
 
-        FuncInterface fobj = (int x)->System.out.println(2*x); 
+        FuncInterface fobj = (int x) -> {
+        	x = 2 * x;
+        	System.out.println(x); 
+        };
    
         fobj.abstractFun(5); 
     } 
